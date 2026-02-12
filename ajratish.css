@@ -1,0 +1,668 @@
+/* Umumiy sozlamalar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Spectral', serif;
+    background-color: #1F4E3A; /* Tashqi fon - to'q yashil */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+/* Saytning asosiy oqish foni (Cream card) */
+.hero-section, .navbar {
+    background-color: #FEF9ED;
+    width: 100%;
+    max-width: 1300px;
+    margin-left:-60px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    border-bottom: 1px solid rgba(31, 78, 58, 0.1);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1F4E3A;
+    margin-right: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: 4px;
+    color: #1F4E3A;
+    font-weight: bold;
+}
+
+.join-btn {
+    border: 1.5px solid #1F4E3A;
+    background: transparent;
+    padding: 8px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #1F4E3A;
+    font-family: 'Spectral';
+    font-weight: 100;
+    margin-left:-20px;
+}
+
+/* Asosiy qism */
+/* Asosiy qism o'zgarishlar bilan */
+.hero-section {
+    padding: 80px 60px;
+    display: flex;
+    min-height: 80vh;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    width: 100%;
+}
+
+.text-side h1 {
+    font-size: 3.2rem;
+    color: #1F4E3A;
+    margin-bottom: 25px;
+    line-height: 1.2;
+    /* 80% dan 95% ga oshirildi, sarlavha ham kengroq turishi uchun */
+    width: 85%; 
+}
+
+.text-side p {
+    color: #1F4E3A;
+    line-height: 1.6;
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+    /* Max-width 800px dan 100% ga o'zgartirildi yoki qiymatni oshirdik */
+    max-width: 100%; 
+    
+}
+
+.scroll-down {
+    color: #1F4E3A;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* O'ng tarafdagi katta matn */
+.visual-side {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.big-text {
+    font-size: 4.5rem;
+    line-height: 1.0;
+    color: #841a1a;
+    font-weight: 800;
+    text-align: right;
+    margin-left: -90px;
+    margin-top:10px;
+}
+
+.illustration img {
+    width: 450px;
+    margin-top: 30px;
+    margin-right: 40px;
+    margin-bottom:-40px;
+    margin-top:-20px;
+}
+
+/* Mobil moslashuv */
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+    .big-text {
+        font-size: 4rem;
+    }
+    .navbar {
+        padding: 20px;
+    }
+}
+
+/* Konteynerni markazlashtirish va mobilga moslash */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Jadval asosiy stillari */
+.waste-table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 600px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px     #1F4E3A;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Sarlavha (Header) stili */
+.waste-table thead {
+    background-color: #1F4E3A;
+    color: #ffffff;
+    text-align: left;
+}
+
+.waste-table th, 
+.waste-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #dddddd;
+}
+
+/* Zebra effekti (qatorlarni ajratish uchun) */
+.waste-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+/* Sichqoncha ustiga kelganda rang o'zgarishi */
+.waste-table tbody tr:hover {
+    background-color: #e9f5ff;
+    transition: background-color 0.3s ease;
+}
+
+/* Oxirgi qator chegarasini olib tashlash */
+.waste-table tbody tr:last-of-type {
+    border-bottom: 2px solid    #1F4E3A;
+}
+
+/* Matn stilini biroz kuchaytirish */
+.waste-table td {
+    color: #1F4E3A;
+    font-size: 14px;
+}
+
+.waste-table th {
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+
+/* Umumiy kenglikdagi matn uchun stillar */
+.hero-section {
+    padding: 80px 20px; /* Yon tarafdagi paddingni biroz kamaytirdik */
+    display: block;    /* Flex-dan voz kechamiz, shunda kontent erkin yoyiladi */
+    min-height: 80vh;
+    width: 100%;
+}
+
+.full-width-content {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;    /* Markazga tekislash */
+    text-align: center;
+    
+}
+.full-width-content h2 {
+    font-size: 2.5rem;
+    color: #1F4E3A; /* Tabiiy yashil rang (ixtiyoriy) */
+    margin-bottom: 20px;
+    font-family: 'Spectral', serif;
+    
+    
+}
+
+.full-width-content h3 {
+    font-size: 1.6rem;
+    color: #1F4E3A; /* Tabiiy yashil rang (ixtiyoriy) */
+    margin-bottom: 20px;
+    font-family: 'Spectral', serif;
+    
+    
+}
+
+
+.full-width-content p {
+    max-width: 1000px; /* Matn juda yoyilib ketmasligi uchun */
+    margin: 0 auto; /* Matn blokini o'rtaga qo'yish */
+
+    color: #1F4E3A;
+    line-height: 1.6;
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+.full-width-content .video-container {
+    max-width: 950px; /* Matn bilan bir xil */
+    margin: 20px auto; /* O'rtaga qo'yish */
+    overflow: hidden; /* Chegaradan chiqib ketmasligi uchun */
+    border-radius: 12px; /* Burchaklarni yumshatish (ixtiyoriy) */
+    margin-bottom: -60px;
+}
+
+.auto-video {
+    width: 100%;
+    display: block;
+    height: auto;
+    object-fit: cover; /* Agar video o'lchami biroz boshqacha bo'lsa, to'ldirib turadi */
+    pointer-events: none; /* Foydalanuvchi videoni ustiga bosganda to'xtab qolmasligi uchun */
+}
+
+.full-width-content h1 {
+    font-size: 3.2rem;
+    color: #1F4E3A;
+    margin-bottom: 25px;
+    line-height: 1.2;
+    width: 80%;
+max-width: none;
+margin-left:100px;
+    
+}
+
+.strelka img {
+    width: 100px;
+    margin-top: 30px;
+    margin-right: 40px;
+    margin-bottom:-20px;
+    margin-top:20px;
+}
+
+.chiqindi-konteyner {
+    text-align: center;
+    padding: 20px;
+}
+
+.strelkalar-grid {
+    display: flex;
+    justify-content: space-around; /* Strelkalarni teng taqsimlaydi */
+    align-items: center;
+    flex-wrap: wrap; /* Ekran kichraysa keyingi qatorga tushadi */
+    gap: 15px;
+    margin-top: 30px;
+}
+
+
+.strelka-item img {
+    width: 50px; /* Strelka o'lchamini shu yerdan o'zgartirasiz */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.strelka-item span {
+    font-weight: bold;
+    font-size: 20px;
+    color:  #1F4E3A;
+    max-width: 200px;
+}
+
+.strelka-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Strelka va ma'lumot orasidagi masofa */
+}
+
+.main-arrow {
+    width: 60px; /* Strelka o'lchami */
+    height: auto;
+}
+
+.info-box {
+    display: flex;
+    align-items: center; /* Logo va matnni bir chiziqqa tekislaydi */
+    gap: 5px; /* Logo va matn orasidagi masofa */
+    background: #f4f4f4; /* Fon berish (ixtiyoriy) */
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.category-logo {
+    width: 25px; /* Logotip o'lchami */
+    height: 25px;
+    object-fit: contain;
+}
+
+.info-box span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.qavs img {
+    width: 700px;
+    margin-top: 30px;
+    margin-right: 40px;
+    margin-bottom:-20px;
+    margin-top:-100px;
+}
+
+.paket img {
+    width: 700px;
+    margin-top: 30px;
+    margin-left: -500px;
+    margin-bottom:-100px;
+    margin-top:-50px;
+}
+
+.yon img {
+    width: 150px;
+    margin-left: 170px;
+    margin-bottom:60px;
+    margin-top:-300px;
+}
+
+.belgi img {
+    width: 180px;
+
+    margin-left: 450px;
+    margin-bottom:-20px;
+    margin-top:-270px;
+}
+
+.paketik img {
+    width: 200px;
+    margin-top: 30px;
+    margin-left: -900px;
+    margin-bottom:-100px;
+    margin-top:-50px;
+}
+
+.paketiw img {
+    width: 350px;
+    margin-top: 30px;
+    margin-left: -900px;
+    margin-bottom:-100px;
+    margin-top:-170px;
+}
+
+.pakety img {
+    width: 300px;
+    margin-top: 30px;
+    margin-left: -900px;
+    margin-bottom:-100px;
+    margin-top:-170px;
+}
+
+.paketiq img {
+    width: 250px;
+    margin-top: 30px;
+    margin-left: -900px;
+    margin-bottom:-100px;
+    margin-top:-170px;
+}
+
+.paketcha img {
+    width: 400px;
+    margin-top: 30px;
+    margin-left: -900px;
+    margin-bottom:-100px;
+    margin-top:-170px;
+}
+
+.belgiw img {
+    width: 250px;
+
+    margin-left: 450px;
+    margin-bottom:-20px;
+    margin-top:-270px;
+}
+
+:root {
+    --primary-color: #1F4E3A;
+    --accent-color: #4CAF50;
+    --text-light: rgba(31, 78, 58, 0.8);
+}
+
+.hero-section {
+    padding: 10px 5%;
+    background-color: #f9fbf9;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.8fr 0.4fr; /* Matn qismi biroz kengroq */
+    gap: 50px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+
+}
+
+.badge {
+    background: rgba(76, 175, 80, 0.1);
+    color: var(--accent-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.text-side h1 {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin: 15px 0;
+    line-height: 1.1;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.info-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+
+}
+
+.info-card h3 {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.custom-list {
+    list-style: none;
+    padding: 0;
+}
+
+.custom-list li::before {
+    content: "✔";
+    color: var(--accent-color);
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.benefit-item {
+    margin-top: 15px;
+    padding-left: 15px;
+    border-left: 3px solid var(--accent-color);
+}
+
+
+/* Telefonlar uchun moslashuvchanlik */
+@media (max-width: 968px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .text-side h1 {
+        font-size: 2.5rem;
+    }
+}
+/* Asosiy konteynerni o'zgartiramiz */
+
+
+.eco-badge {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    background: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: rotate(10deg); /* Biroq qiyshaytirilgan zamonaviy ko'rinish */
+}
+
+/* Telefonlar uchun (Rasm pastga tushadi va kichrayadi) */
+@media (max-width: 968px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .image-side {
+        justify-content: center;
+        order: -1; /* Mobilda rasm matndan oldin chiqishi uchun */
+    }
+    
+    .image-wrapper {
+        height: 400px;
+    }
+    
+    .text-side {
+        margin-top: 20px !important;
+    }
+}
+
+/* Rasm ustidagi suzib yuruvchi kichik karta */
+.floating-card {
+    position: absolute;
+    bottom: 20px;
+    left: -20px;
+    background: white;
+    padding: 15px 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.floating-card span {
+    font-size: 1.5rem;
+}
+
+.floating-card p {
+    margin: 0;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+/* Yengil suzish animatsiyasi */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Telefon versiyasi uchun rasm o'lchamini to'g'irlash */
+@media (max-width: 968px) {
+    .image-wrapper {
+        margin-top: 40px;
+        border-radius: 30px; /* Mobilda oddiyroq ko'rinish */
+    }
+    .floating-card {
+        left: 20px;
+    }
+}
+
+.illustrational img {
+    width: 290px;
+    margin-top: 30px;
+    margin-right: 40px;
+    margin-bottom:-40px;
+    margin-top:-50px;
+}
+
+.illustrationny img {
+    width: 350px;
+    margin-top: 30px;
+    margin-right: 40px;
+    margin-bottom:-40px;
+    margin-top:-50px;
+}
+
+
+.illu img {
+    width: 430px;
+    margin-top: 30px;
+    margin-right: 40px;
+    margin-bottom:-40px;
+    margin-top:-50px;
+}
+
+.illuw img {
+    width: 410px;
+    margin-top: 30px;
+    margin-right: 40px;
+    margin-bottom:-40px;
+    margin-top:-50px;
+}
+
+.belgicha img {
+    width: 150px;
+
+    margin-left: 450px;
+    margin-bottom:-20px;
+    margin-top:-270px;
+}
+
+.red h3{
+    color:rgb(208, 39, 39);
+        font-size: 1.6rem;
+    margin-bottom: 20px;
+    font-family: 'Spectral', serif;
+}
+
+
+.neu-button {
+  background-color: #e0e0e0;
+  border-radius: 50px;
+  box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
+  color: #4d4d4d;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 15px 40px;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid rgb(206, 206, 206);
+  margin-top: 30px;
+  margin-left: -1000px;
+}
+
+.neu-button:hover {
+  box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+}
+
+.neu-button:focus {
+  outline: none;
+  box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+}

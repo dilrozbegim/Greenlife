@@ -1,0 +1,275 @@
+/* Umumiy sozlamalar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Spectral', serif;
+    background-color: #1F4E3A; /* Tashqi fon - to'q yashil */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+/* Saytning asosiy oqish foni (Cream card) */
+.hero-section, .navbar {
+    background-color: #FEF9ED;
+    width: 100%;
+    max-width: 1300px;
+    margin-left:-60px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    border-bottom: 1px solid rgba(31, 78, 58, 0.1);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1F4E3A;
+    margin-right: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: 4px;
+    color: #1F4E3A;
+    font-weight: bold;
+}
+
+.join-btn {
+    border: 1.5px solid #1F4E3A;
+    background: transparent;
+    padding: 8px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #1F4E3A;
+    font-family: 'Spectral';
+    font-weight: 600;
+}
+
+/* Asosiy qism */
+.hero-section {
+    padding: 80px 60px;
+    display: flex;
+    min-height: 80vh;
+    position: relative; /* Tugmani joylashtirish uchun kerak */
+    padding-top: 80px; /* Tugma uchun yuqoridan joy */
+    
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    width: 100%;
+}
+
+.text-side h1 {
+    font-size: 3.2rem;
+    color: #1F4E3A;
+    margin-bottom: 25px;
+    line-height: 1.2;
+    width: 80%;
+
+}
+
+.text-side p {
+    color: #1F4E3A;
+    line-height: 1.6;
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.scroll-down {
+    color: #1F4E3A;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* O'ng tarafdagi katta matn */
+.visual-side {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.big-text {
+    font-size: 4.5rem;
+    line-height: 1.0;
+    color: #841a1a;
+    font-weight: 800;
+    text-align: right;
+    margin-left: -90px;
+    margin-top:10px;
+}
+
+.illustration img {
+    width: 380px;
+    margin-top: 30px;
+    margin-right: 40px;
+    margin-bottom:-40px;
+}
+
+/* Mobil moslashuv */
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+    .big-text {
+        font-size: 4rem;
+    }
+    .navbar {
+        padding: 20px;
+    }
+}
+
+/* Konteynerni markazlashtirish va mobilga moslash */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Jadval asosiy stillari */
+.waste-table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 600px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px     #1F4E3A;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Sarlavha (Header) stili */
+.waste-table thead {
+    background-color: #1F4E3A;
+    color: #ffffff;
+    text-align: left;
+}
+
+.waste-table th, 
+.waste-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #dddddd;
+}
+
+/* Zebra effekti (qatorlarni ajratish uchun) */
+.waste-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+/* Sichqoncha ustiga kelganda rang o'zgarishi */
+.waste-table tbody tr:hover {
+    background-color: #e9f5ff;
+    transition: background-color 0.3s ease;
+}
+
+/* Oxirgi qator chegarasini olib tashlash */
+.waste-table tbody tr:last-of-type {
+    border-bottom: 2px solid    #1F4E3A;
+}
+
+/* Matn stilini biroz kuchaytirish */
+.waste-table td {
+    color: #1F4E3A;
+    font-size: 14px;
+}
+
+.waste-table th {
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+
+/* Umumiy kenglikdagi matn uchun stillar */
+.full-width-content {
+    max-width: 1200px; /* Hero section bilan bir xil kenglikda bo'lishi uchun */
+    margin: 50px auto; /* Yuqoridan masofa va markazga olish */
+    padding: 0 20px;
+
+    margin-top: 1100px;
+    margin-left:-1000px;
+    
+}
+
+.full-width-content h2 {
+    font-size: 2.5rem;
+    color: #1F4E3A; /* Tabiiy yashil rang (ixtiyoriy) */
+    margin-bottom: 20px;
+    font-family: 'Spectral', serif;
+    
+}
+
+.full-width-content p {
+    max-width: 950px; /* Matn juda yoyilib ketmasligi uchun */
+    margin: 0 auto; /* Matn blokini o'rtaga qo'yish */
+
+    color: #1F4E3A;
+    line-height: 1.6;
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+.full-width-content .video-container {
+    max-width: 950px; /* Matn bilan bir xil */
+    margin: 20px auto; /* O'rtaga qo'yish */
+    overflow: hidden; /* Chegaradan chiqib ketmasligi uchun */
+    border-radius: 12px; /* Burchaklarni yumshatish (ixtiyoriy) */
+    margin-bottom: -60px;
+}
+
+.auto-video {
+    width: 100%;
+    display: block;
+    height: auto;
+    object-fit: cover; /* Agar video o'lchami biroz boshqacha bo'lsa, to'ldirib turadi */
+    pointer-events: none; /* Foydalanuvchi videoni ustiga bosganda to'xtab qolmasligi uchun */
+}
+
+.back-btn {
+    position: absolute; /* Sahifaning yuqori qismida turishi uchun */
+    top: 20px;
+    left: 20px;
+    padding: 12px 35px;
+    font-family: 'Spectral', serif;
+    font-size: 1.2rem;
+    color: #4a4a4a; /* Matn rangi */
+    background: linear-gradient(to bottom, #ffffff, #e6e6e6); /* Rasmda ko'rsatilgan gradient */
+    border: 1px solid #ccc;
+    border-radius: 50px;
+}
+
+
+.back-btn:hover {
+  box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+}
+
+.back-btn:focus {
+  outline: none;
+  box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+}
+
+
+/* Pleyerni yashirish (agar kerak bo'lsa) */
+audio {
+    display: none;
+}

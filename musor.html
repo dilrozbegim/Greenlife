@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaia - Nurturing Our Planet</title>
+    <link rel="stylesheet" href="musor.css">
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="nav-right">
+            <button class="join-btn">Join us</button>
+        </div>
+    </header>
+
+    <main class="hero-section">
+        <button class="back-btn" onclick="goBack()">Ortga qaytish</button>
+        <div class="hero-content">
+            <div class="text-side">
+
+                <h1>O'zbekistonda yiliga qancha chiqindi yig‘iladi?</h1>
+                <p>Bu har bir fuqaro hisobiga yiliga o‘rtacha 300-400 kg chiqindi to‘g‘ri keladi degani.<br></p>
+
+                <p>Afsuski, bu ulkan hajmdagi chiqindining faqatgina <b>25-30%</b> atrofidagisi (ba’zi turlar bo‘yicha undan ham kam, masalan, plastikda 6-10%) qayta ishlanadi. Qolgan <b>70-75%</b> qismi esa maxsus poligonlarga (axlatxonalarga) borib tushadi va u yerda o‘nlab, yuzlab yillar davomida chirib yotadi.</p>
+
+                <div class="table-container">
+                    <table class="waste-table">
+                        <thead>
+                            <tr>
+                                <th>Chiqindi turi</th>
+                                <th>Yillik hajmi (taxminan)</th>
+                                <th>Qayta ishlash darajasi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Organik (oziq-ovqat qoldiqlari)</td>
+                                <td>5,5 - 6 mln tonna (37-40%)</td>
+                                <td>Juda past (asosan chirindi bo'ladi)</td>
+                            </tr>
+                            <tr>
+                                <td>Plastik</td>
+                                <td>1,5 - 1,8 mln tonna (10-15%)</td>
+                                <td>7-10% atrofida</td>
+                            </tr>
+                            <tr>
+                                <td>Qog‘oz va karton</td>
+                                <td>600 - 700 ming tonna (5-7%)</td>
+                                <td>25-30% atrofida</td>
+                            </tr>
+                            <tr>
+                                <td>Shisha</td>
+                                <td>400 - 640 ming tonna (4-5%)</td>
+                                <td>9-10% atrofida</td>
+                            </tr>
+                            <tr>
+                                <td>Metal</td>
+                                <td>200 - 300 ming tonna (2%)</td>
+                                <td>Yuqori (metall qimmatligi uchun)</td>
+                            </tr>
+                            <tr>
+                                <td>Material (Tekstil/latta)</td>
+                                <td>300 - 450 ming tonna (3%)</td>
+                                <td>Past</td>
+                            </tr>
+                            <tr>
+                                <td>Boshqalar (qurilish, rezina va h.k.)</td>
+                                <td>Qolgan qismi</td>
+                                <td>O‘zgaruvchan</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+
+            <div class="visual-side">
+                <div class="big-text">14,5 — 15,1 million tonna <br> maishiy chiqindi</div>
+                <div class="illustration">
+                    <img src="treww.png" alt="Eco icon">
+                    <img src="tog_-removebg-preview.png">
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="full-width-content">
+            <h2>Nima uchun chiqindiligicha qolib ketmoqda?</h2>
+            <p>Chiqindining qayta ishlanmay, poligonlarda to‘planib qolishiga bir nechta jiddiy to‘siqlar bor:<br></p>
+            <p><br></p>
+            <p><b>Saralash madaniyatining yo‘qligi:</b> Bizda hali ham hamma narsa (oziq-ovqat qoldig‘i, plastik butilka, qog‘oz) bitta paketga solib tashlanadi. Chiqindi bir-biriga aralashib ketgach (ayniqsa organik chiqindi bilan), uni qayta ajratish qiyin va qimmatga tushadi.<br></p>
+            <p><br></p>
+            <p><b>Logistika va infratuzilma:</b> Hamma hududlarda ham chiqindini saralash punktlari yoki qayta ishlash zavodlari mavjud emas. Chiqindini uzoq masofaga tashish xarajatlari uni qayta ishlashdan tushadigan foydadan baland bo‘lib ketishi mumkin.</b></p>
+        
+<div class="video-container">
+        <video autoplay muted loop playsinline class="auto-video">
+            <source src="musorvideo - COMPRESS (1).mp4" type="video/mp4">
+            Brauzeringiz videoni qo'llab-quvvatlamaydi.
+        </video>
+    </div>
+    </main>
+
+<audio id="myAudio" loop>
+    <source src="originsignal.mp3" type="audio/mpeg">
+</audio>
+
+
+</body>
+
+<script>
+            function goBack() {
+            window.history.back();
+        }
+
+        
+    document.body.addEventListener('click', function() {
+        var audio = document.getElementById("myAudio");
+        if (audio.paused) {
+            audio.play();
+        }
+    }, { once: true }); // {once: true} - bu kod faqat birinchi marta bosilganda ishlaydi
+
+    
+
+
+</script>
+</html>

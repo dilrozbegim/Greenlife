@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaia - Bizga qo'shiling</title>
+    <link rel="stylesheet" href="elon.css">
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="nav-right" style="padding: 20px;">
+            <button class="neu-button" onclick="goBack()">Ortga qaytish</button>
+        </div>
+    </header>
+
+    <main class="hero-section">
+        <div class="full-width-content">
+            <h1>Bizning jamoaga qo'shiling</h1>
+            <p>Tabiatni asrash yo'lidagi harakatingizni bugun boshlang.</p>
+
+            <div class="forms-wrapper">
+                <section class="form-section">
+                    <h2 class="section-title">Volontyor bo'lish</h2>
+                    <div class="form-container">
+                        <form id="volunteer-form">
+                            <div class="form-group">
+                                <label for="v-name">Ism</label>
+                                <input type="text" id="v-name" placeholder="Ismingizni kiriting" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="v-surname">Familya</label>
+                                <input type="text" id="v-surname" placeholder="Familyangizni kiriting" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="v-phone">Telefon raqam</label>
+                                <input type="tel" id="v-phone" placeholder="+998" required>
+                            </div>
+                            <button type="submit" class="join-btn-full">A'zo bo'lish</button>
+                        </form>
+                    </div>
+                </section>
+
+                <div class="divider"></div>
+        <div class="full-width-content" style="margin-top:-90px">
+            <h2>-------------------------------------------------------------------------------------------------------------------------------</h2>
+        </div>
+
+                <section class="form-section">
+                    <h2 class="section-title">Ishga kirish (Punktlar uchun)</h2>
+                    <div class="form-container">
+                        <form id="job-form">
+                            <div class="form-group">
+                                <label for="j-fullname">Ism va Familyangiz</label>
+                                <input type="text" id="j-fullname" placeholder="To'liq ismingiz" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="j-gender">Jinsingiz</label>
+                                    <select id="j-gender" required>
+                                        <option value="">Tanlang</option>
+                                        <option value="male">Erkak</option>
+                                        <option value="female">Ayol</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="j-age">Yoshingiz</label>
+                                    <input type="number" id="j-age" min="18" placeholder="18+" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="j-birth">Tug'ilgan sanangiz</label>
+                                <input type="date" id="j-birth" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="j-phone">Telefon raqam</label>
+                                <input type="tel" id="j-phone" placeholder="+998" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="j-address">Turar joy manzili</label>
+                                <input type="text" id="j-address" placeholder="Tuman, ko'cha, uy" required>
+                            </div>
+
+                            <button type="submit" class="join-btn-full">Ariza topshirish</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
